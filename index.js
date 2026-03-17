@@ -1,11 +1,29 @@
-console.log("Hello World")
+var  x = 10 
 
-function trackFunction(depth,maxDepth){
-    console.trace('Entering depth',depth)
-    if(depth<maxDepth){
-        trackFunction(depth+1,maxDepth)
-    }
-   console.log("Exiting depth:", depth);
+if(true){
+    var x = 20
+}
+// data override
+console.log(x)
+
+
+console.log("VAL",val)
+//let val = 100
+var val
+setTimeout(()=>{
+console.log("Hi")
+},5000)
+
+for (let k = 0 ;k < 5 ;k++){
+    setTimeout(()=>{
+        console.log(k,'using let for k')
+    },
+    100)
 }
 
-trackFunction(1,5)
+for (var i = 0 ;i < 5 ;i++){
+    setTimeout(()=>{
+        console.log(i,'using var for i')
+    },
+    100)
+}
